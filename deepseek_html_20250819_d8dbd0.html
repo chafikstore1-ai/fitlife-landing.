@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Days to Transform Your Life with Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #3498db;
+            --secondary-blue: #2980b9;
+            --primary-green: #2ecc71;
+            --secondary-green: #27ae60;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gray-color: #7f8c8d;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f4fc 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-green);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-green);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 15px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--secondary-green);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-blue);
+        }
+        
+        /* Book Preview */
+        .book-preview {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+        
+        .book-cover {
+            max-width: 300px;
+            margin: 0 auto 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 5px solid white;
+        }
+        
+        .book-cover img {
+            width: 100%;
+            display: block;
+        }
+        
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--primary-blue);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Content Section */
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .section-title {
+            text-align: center;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-green);
+        }
+        
+        .chapter {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            background: var(--light-color);
+        }
+        
+        .chapter h3 {
+            color: var(--secondary-blue);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .chapter-number {
+            background: var(--primary-blue);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: white;
+            border-radius: 15px;
+            margin: 40px auto;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .price-tag {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .testimonial {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .faq {
+            margin-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: var(--secondary-blue);
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .faq-question i {
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding-left: 30px;
+            color: var(--gray-color);
+            display: none;
+        }
+        
+        .faq.active .faq-answer {
+            display: block;
+        }
+        
+        .faq.active .faq-question i {
+            transform: rotate(90deg);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+            
+            .book-cover {
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">FitLife</div>
+            <div class="header-content">
+                <h1>30 Days to Transform Your Life with Fitness</h1>
+                <p>The complete guide to home workouts, nutrition, and motivation - no equipment needed!</p>
+                <div class="header-buttons">
+                    <a href="#" class="btn">Buy Now - $10</a>
+                    <a href="#" class="btn btn-outline">Free Preview</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="book-preview">
+            <h2>Your Guide to a Healthier Life</h2>
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/300x400/3498db/ffffff?text=30+Days+Fitness+Guide" alt="Book Cover">
+            </div>
+            <p>High-quality PDF e-book - 50 pages of valuable content</p>
+            <a href="#" class="btn">Download Free Sample</a>
+        </section>
+        
+        <section class="content-section">
+            <h2 class="section-title">What's Inside The Book</h2>
+            
+            <div class="chapter">
+                <h3><span class="chapter-number">1</span> Chapter 1: Introduction</h3>
+                <p>The importance of home workouts, how to start your journey step by step, initial tips for success, setting up your workout space.</p>
+            </div>
+            
+            <div class="chapter">
+                <h3><span class="chapter-number">2</span> Chapter 2: Fitness Plan (30 Days)</h3>
+                <p>Clear weekly schedule with daily illustrated exercises, beginner and intermediate levels, strength and endurance training.</p>
+            </div>
+            
+            <div class="chapter">
+                <h3><span class="chapter-number">3</span> Chapter 3: Simple Sports Nutrition</h3>
+                <p>Pre and post-workout foods, 10 quick and healthy recipes (smoothies, salads, snacks), hydration and balanced nutrition tips.</p>
+            </div>
+            
+            <div class="chapter">
+                <h3><span class="chapter-number">4</span> Chapter 4: Motivation & Mindset</h3>
+                <p>Inspirational quotes, ways to maintain consistency, overcoming challenges and obstacles, building lasting habits.</p>
+            </div>
+            
+            <div class="chapter">
+                <h3><span class="chapter-number">5</span> Chapter 5: Relaxation & Recovery</h3>
+                <p>Illustrated stretching exercises, importance of sleep and water, effective recovery strategies, meditation and breathing exercises.</p>
+            </div>
+        </section>
+        
+        <h2 class="section-title">Why This Book Is Different</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Home Workouts Without Equipment</h3>
+                <p>No need for expensive equipment, all exercises can be done at home using just your body weight.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Practical Nutrition Plans</h3>
+                <p>Easy-to-prepare recipes with available ingredients, suitable for men and women, considering different dietary preferences.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Motivational & Mental Support</h3>
+                <p>Not just exercises, but a complete program to build athletic mindset and maintain enthusiasm throughout the journey.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Tracking & Evaluation Sheets</h3>
+                <p>Tools to track your progress daily and weekly, with tips for continuous development and achieving the best results.</p>
+            </div>
+        </div>
+        
+        <section class="pricing">
+            <h2>Get The Complete Book Now</h2>
+            <p>Invest in your health and fitness for a symbolic amount</p>
+            <div class="price-tag">$10</div>
+            <p>One-time payment - Better healthy life</p>
+            <a href="#" class="btn">Buy Now on Gumroad</a>
+        </section>
+        
+        <h2 class="section-title">What Readers Say</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p class="testimonial-text">"This book completely changed my life. I struggled with laziness and inconsistency, and now I have a fun healthy routine."</p>
+                <p class="testimonial-author">- Ahmed from Riyadh</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"The exercises are really effective and the recipes are delicious and easy. The best investment I've made for my health."</p>
+                <p class="testimonial-author">- Fatima from Dubai</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"Thanks to this program, I lost 8 kg in two months and my self-confidence increased significantly."</p>
+                <p class="testimonial-author">- Khaled from Cairo</p>
+            </div>
+        </div>
+        
+        <section class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq">
+                <div class="faq-question"><i class="fas fa-chevron-right"></i> Do I need any equipment for these workouts?</div>
+                <div class="faq-answer">No, all exercises are designed to be done with just your body weight. You might want to use a mat for comfort, but it's optional.</div>
+            </div>
+            
+            <div class="faq">
+                <div class="faq-question"><i class="fas fa-chevron-right"></i> How long are the daily workouts?</div>
+                <div class="faq-answer">Workouts range from 15-30 minutes depending on your level and the day's focus. The program is designed for busy people.</div>
+            </div>
+            
+            <div class="faq">
+                <div class="faq-question"><i class="fas fa-chevron-right"></i> Is this suitable for complete beginners?</div>
+                <div class="faq-answer">Absolutely! The program includes modifications for all exercises and progresses gradually to avoid overwhelm.</div>
+            </div>
+            
+            <div class="faq">
+                <div class="faq-question"><i class="fas fa-chevron-right"></i> What format will I receive the book in?</div>
+                <div class="faq-answer">You'll receive a high-quality PDF file that you can download immediately after purchase and view on any device.</div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>30 Days to Transform Your Life with Fitness</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Support</a>
+            </div>
+            <p>© 2023 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faq = question.parentElement;
+                faq.classList.toggle('active');
+            });
+        });
+
+        // Buy button alert (for demo purposes)
+        document.querySelectorAll('.btn').forEach(button => {
+            if (button.textContent.includes('Buy')) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your interest! You would now be redirected to the Gumroad purchase page.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
